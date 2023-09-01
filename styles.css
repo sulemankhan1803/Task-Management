@@ -1,0 +1,64 @@
+.navbar {
+  margin-bottom: 0;
+  height: 56px;
+}
+
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sidebar {
+  height: 100vh;
+  width: 250px;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  background-color: #f8f9fa;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s;
+}
+
+.sidebar-heading {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.sidebar-link {
+  display: block;
+  padding: 8px 0;
+  color: #333;
+  text-decoration: none;
+}
+
+.active {
+  font-weight: bold;
+}
+
+/* Show the menu icon on small screens */
+@media (max-width: 767px) {
+  .navbar-toggler {
+    display: block;
+  }
+  .sidebar {
+    left: -250px;
+  }
+  .sidebar.active {
+    left: 0;
+  }
+  .content {
+    margin-left: 0;
+  }
+}
+
+/* Hide the menu icon on larger screens */
+@media (min-width: 768px) {
+  .navbar-toggler {
+    display: none;
+  }
+  .content {
+    margin-left: 260px;
+  }
+}
